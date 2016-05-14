@@ -6,14 +6,14 @@ import {
   Navigator
 } from 'react-native';
 
-var LoginScreen = require('./Screens/LoginScreen')
-
+var Screens = require('./Screens')
+var ScreenMap = require('./ScreensMap')
 class Home extends Component{
   render() {
     return(
       <Navigator 
-        initialRoute={{}} 
-        renderScene={(route, navigator) => <LoginScreen  />}
+        initialRoute={{screen:ScreenMap.login}} 
+        renderScene={Screens.render}
       />
     );
   }
