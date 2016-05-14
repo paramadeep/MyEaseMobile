@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  Navigator,
 } from 'react-native';
 
-var LoginScreen = require("./App/Screens/LoginScreen")
+var Home = require("./App/Home")
 
 class MyEas extends Component {
   render() {
     return (
-      <Navigator 
-        initialRoute={{name: 'My First Scene', index: 0}} 
-        renderScene={(route, navigator) => <LoginScreen name={route.name} />}
-      />
+      <Home/>
     );
   }
 }
