@@ -1,14 +1,5 @@
-'use strict';
-
-import React from 'react';
-
-var Screens =  {
-  render:(route,navigator)=>{
-    var Screen = route.screen
-    return(
-      <Screen navigator={navigator} data={route.data}/>
-    );
-  }
-  
+var Screens = {
+  get login(){ return require('./LoginScreen')},
+  get dashBoard(){ return require('./DashBoardScreen')}
 }
-  module.exports = Screens
+module.exports = Screens;

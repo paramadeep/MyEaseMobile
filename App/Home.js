@@ -6,13 +6,12 @@ import {
 } from 'react-native';
 
 var Screens = require('./Screens')
-var ScreenMap = require('./ScreensMap')
 class Home extends Component{
   render() {
     return(
       <Navigator 
-        initialRoute={{screen:ScreenMap.login}} 
-        renderScene={Screens.render}
+        initialRoute={{screen:Screens.login}} 
+        renderScene={(route,navigator)=><route.screen navigator={navigator} data={route.data}/>}
       />
     );
   }
