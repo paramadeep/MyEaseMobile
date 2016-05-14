@@ -1,6 +1,5 @@
 var ScreensMap = {
-  login: require('./Screens/LoginScreen'),
-  dashBoard: require('./Screens/DashBoardScreen')
+  get login(){ return require('./Screens/LoginScreen')},
+  get dashBoard(){ return require('./Screens/DashBoardScreen')}
 }
-
 module.exports = ScreensMap;

@@ -1,17 +1,14 @@
 'use strict';
 
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableHighlight,
-} from 'react-native';
+import { StyleSheet,View } from 'react-native';
 
-var Title = require('../Components/Title');
-var Label = require('../Components/Label');
-var TextInput = require('../Components/TextInput');
-var Button = require('../Components/Button');
+import {
+  Title,
+  Label,
+  TextInput,
+  Button,
+} from '../Components';
 
 class LoginScreen extends Component{
   render() {

@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Navigator
 } from 'react-native';
 
@@ -18,9 +17,5 @@ class Home extends Component{
     );
   }
 };
-
-var styles=StyleSheet.create({
-
-});
 
 module.exports=Home;
