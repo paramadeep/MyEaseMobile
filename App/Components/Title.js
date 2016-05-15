@@ -14,7 +14,7 @@ class Title  extends Component{
         <View style={styles.topBar}/> 
         <View style={styles.titleTextContainer}>
           <Text style={styles.titleText}>
-            {this.props.title}
+            {this.props.text}
           </Text>
         </View>
       </View>

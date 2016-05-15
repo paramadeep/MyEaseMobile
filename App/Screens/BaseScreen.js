@@ -8,16 +8,15 @@ import {
 
 import {
   Title,
-  Label,
-  TextInput,
-  Button,
 } from '../Components';
 
-class DashboardScreen extends Component{
+
+class BaseScreen extends Component{
   render() {
     return(
       <View>
-        <Title text={`Hi ${this.props.data.name}`} /> 
+        <Title text={this.state.title} >
+
       </View>
     );
   }
@@ -26,4 +25,5 @@ class DashboardScreen extends Component{
 var styles=StyleSheet.create({
 
 });
-module.exports=DashboardScreen;
+
+module.exports=BaseScreen;

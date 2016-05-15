@@ -12,7 +12,7 @@ var Colors = require('../Colors')
 class Button  extends Component{
   render() {
     return(
-      <TouchableHighlight style={styles.button}> 
+      <TouchableHighlight style={styles.button} onPress={this.props.onPress}> 
         <Text style={styles.buttonText}>
           {this.props.text}
         </Text>

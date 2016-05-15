@@ -5,12 +5,12 @@ import {
   Navigator
 } from 'react-native';
 
-var Screens = require('./Screens')
+var LoginScreen = require('./Screens/LoginScreen')
 class Home extends Component{
   render() {
     return(
       <Navigator 
-        initialRoute={{screen:Screens.login}} 
+        initialRoute={{screen:LoginScreen}} 
         renderScene={(route,navigator)=><route.screen navigator={navigator} data={route.data}/>}
       />
     );
