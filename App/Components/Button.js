@@ -12,7 +12,10 @@ var Colors = require('../Colors')
 class Button  extends Component{
   render() {
     return(
-      <TouchableHighlight style={styles.button} onPress={this.props.onPress}> 
+      <TouchableHighlight 
+        style={styles.button} 
+        onPress={this.props.onPress}
+        underlayColor={Colors.defaultPrimary}> 
         <Text style={styles.buttonText}>
           {this.props.text}
         </Text>

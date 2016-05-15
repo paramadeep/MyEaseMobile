@@ -6,10 +6,18 @@ import {
   View
 } from 'react-native';
 
+import {
+  Title,
+  Button,
+} from '../Components';
+
+
 class ProfileScreen  extends Component{
   render() {
     return(
-     <View/>
+      <View>
+        <Title text='Profile'/>
+      </View>
     );
   }
 };

@@ -32,6 +32,7 @@ class LoginScreen extends Component{
       })
       .done()
   }
+
   render() {
     return(
       <View>
