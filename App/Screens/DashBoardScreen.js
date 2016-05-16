@@ -38,7 +38,7 @@ class DashboardScreen extends Component{
       <View>
         <Title text={`Hi ${this.props.data.name}`} /> 
         <Button text='Profile' onPress={this.gotoProfile.bind(this)}/>
-        <Button text='LMS' onPress={this.gotoLMS.bind(this)}/>
+        <Button text='Leaves' onPress={this.gotoLMS.bind(this)}/>
         <Button text='Compensation' onPress={this.gotoCompensation.bind(this)}/>
         <Button text='Pay-E' onPress={this.gotoPayE.bind(this)}/>
       </View>

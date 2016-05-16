@@ -11,7 +11,7 @@ import {
   Button,
   FieldValue
 } from '../Components';
-
+import AddLeaveScreen from './AddLeaveScreen';
 class LMSScreen  extends Component{
 
   handleLeftPress(){
@@ -19,14 +19,19 @@ class LMSScreen  extends Component{
   }
 
   addLeave(){
-    
+    var route = {
+      screen: AddLeaveScreen,
+    }
+    this.props.navigator.push(route);
   }
 
   render() {
     return(
      <View>
-        <Title text='LMS' onLeftPress={this.handleLeftPress.bind(this)} onAction={this.addLeave}/>
-        <FieldValue value='Taken: 10 days' field='Available: 15'/>
+       <Title text='Leaves' 
+         onLeftPress={this.handleLeftPress.bind(this)} 
+         onAction={this.addLeave.bind(this)}/>
+        <FieldValue value='Taken: 10 days' field='Available: 15 days'/>
       </View>
     );
 }
