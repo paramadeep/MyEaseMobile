@@ -3,12 +3,14 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  Text,
   View
 } from 'react-native';
 
 import {
   Title,
   Button,
+  FieldValue,
 } from '../Components';
 
 
@@ -22,9 +24,12 @@ class ProfileScreen  extends Component{
     return(
       <View>
         <Title text='Profile' onLeftPress={this.handleLeftPress.bind(this)}/>
+        <FieldValue field='Name' value='Deepak' />
+        <FieldValue field='Father name' value='Paramasivam' />
+        <FieldValue field='DOB' value='12 Dec 1982' />
       </View>
     );
-  }
+}
 };
 
 var styles=StyleSheet.create({
