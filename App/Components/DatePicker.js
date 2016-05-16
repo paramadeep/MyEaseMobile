@@ -7,7 +7,8 @@ import {
   View,
   DatePickerIOS,
   DatePickerAndroid,
-  TextInput,
+  TouchableWithoutFeedback,
+  Text,
 } from 'react-native';
 
 class DatePicker  extends Component{
@@ -24,25 +25,40 @@ class DatePicker  extends Component{
     });
   }
 
+  handleDateChange(date){
+    this.setState({date: date});
+  } 
+
   renderIosDatePicker(){
     return(
       <DatePickerIOS
         date={this.state.date} 
         mode="date"
-        onDateChange={(date)=>this.setState({date: date})}
+        onDateChange={this.handleDateChange.bind(this)}
       />
     );
   }
 
+  getPrintableDate(){
+    var date = this.state.date;
+    return date.toLocaleDateString()
+  }
+
+  handleAndroidDateChange(dateResponse){
+    if(dateResponse.action !== DatePickerAndroid.dismissedAction){
+      this.handleDateChange(new Date(dateResponse.year,dateResponse.month,dateResponse.day))
+    }
+  }
+
   showAndroidPicker(){
-    DatePickerAndroid.open({date: this.state.date}).then(()=>{}).done
+    DatePickerAndroid.open({date: this.state.date}).then(this.handleAndroidDateChange.bind(this)).done()
   }
 
   renderAndroidDatePicker(){
     return(
-      <View> 
-        <TextInput onFocus={this.showAndroidPicker.bind(this)} editable={false} value={this.state.date.toString() }/>
-      </View>
+      <TouchableWithoutFeedback onPress={this.showAndroidPicker.bind(this)} > 
+        <Text> {this.getPrintableDate.bind(this)() }</Text>
+      </TouchableWithoutFeedback>
     );
   }
 
