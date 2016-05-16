@@ -20,6 +20,7 @@ class AddLeave extends Component{
       <View>
         <Title text='Add Leave' 
           onLeftPress={this.handleLeftPress.bind(this)}/>
+
       </View>
     );
   }

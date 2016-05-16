@@ -8,6 +8,7 @@ import {
   Label,
   TextInput,
   Button,
+  DatePicker
 } from '../Components';
 
 var DashboardScreen = require('./DashboardScreen');
@@ -46,6 +47,7 @@ class LoginScreen extends Component{
           onChangeText={(value)=>this.setState({password:value})} 
           value={this.state.password}/>
         <Button text='SUBMIT' onPress={this.handleLoginSubmit.bind(this)} />
+        <DatePicker />
       </View>
     );
   }

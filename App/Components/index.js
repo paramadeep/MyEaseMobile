@@ -6,6 +6,9 @@ var Components = {
   get TextInput(){return require('./TextInput')},
   get Title(){return require('./Title')},
   get FieldValue(){return require('./FieldValue')},
+  get DatePicker(){
+    return require('./DatePicker');
+  },
 }
 
 module.exports = Components;
