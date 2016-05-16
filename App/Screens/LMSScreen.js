@@ -18,10 +18,14 @@ class LMSScreen  extends Component{
     this.props.navigator.pop()
   }
 
+  addLeave(){
+    
+  }
+
   render() {
     return(
-      <View>
-        <Title text='LMS' onLeftPress={this.handleLeftPress.bind(this)}/>
+     <View>
+        <Title text='LMS' onLeftPress={this.handleLeftPress.bind(this)} onAction={this.addLeave}/>
         <FieldValue value='Taken: 10 days' field='Available: 15'/>
       </View>
     );
