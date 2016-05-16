@@ -9,17 +9,20 @@ import {
 import {
   Title,
   Button,
+  FieldValue
 } from '../Components';
 
 class LMSScreen  extends Component{
+
   handleLeftPress(){
-    this.props.navigator.pop();
+    this.props.navigator.pop()
   }
 
   render() {
     return(
       <View>
         <Title text='LMS' onLeftPress={this.handleLeftPress.bind(this)}/>
+        <FieldValue value='Taken: 10 days' field='Available: 15'/>
       </View>
     );
 }

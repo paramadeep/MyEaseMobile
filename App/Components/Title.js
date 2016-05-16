@@ -29,6 +29,17 @@ class Title  extends Component{
     }
   }
 
+  renderActionBar(){
+    var onRightPress = this.props.onRightPress;
+    if(onRightPress){
+      return (
+        <View style={styles.actio}>
+          <Icon name={require('../Images/chevron_right/icon.png')} onPress={onRightPress} /> 
+        </View>
+      )
+    }
+  }
+
 
   render() {
     return(
@@ -40,35 +51,38 @@ class Title  extends Component{
             {this.props.text}
           </Text>
           <View>{this.renderRightArrow()}</View>
+          <View>{this.renderActionBar()}
+          </View>
         </View>
       </View>
     );
-}
-};
+        }
+        };
 
-var styles=StyleSheet.create({
-  titleBar: {
-  },
-  topBar: {
-    backgroundColor: Colors.darkPrimary,
-    height: 30
-  },
-  titleTextContainer: {
-    backgroundColor: Colors.defaultPrimary,
-    height: 50,
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "space-between"
-  },
-  titleText: {
-    color: Colors.textPrimary,
-    fontWeight:'bold',
-    fontSize: 20,
-  },
-  leftIcon:{
-  },
-  rightIcon:{
-  },
-});
+        var styles=StyleSheet.create({
+          titleBar: {
+            marginBottom: 20
+          },
+          topBar: {
+            backgroundColor: Colors.darkPrimary,
+            height: 30
+          },
+          titleTextContainer: {
+            backgroundColor: Colors.defaultPrimary,
+            height: 60,
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between"
+          },
+          titleText: {
+            color: Colors.textPrimary,
+            fontWeight:'bold',
+            fontSize: 20,
+          },
+          leftIcon:{
+          },
+          rightIcon:{
+          },
+        });
 
-module.exports=Title;
+        module.exports=Title;
