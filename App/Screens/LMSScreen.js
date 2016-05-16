@@ -11,23 +11,22 @@ import {
   Button,
 } from '../Components';
 
-
-class ProfileScreen  extends Component{
+class LMSScreen  extends Component{
   handleLeftPress(){
     this.props.navigator.pop();
   }
 
-
   render() {
     return(
       <View>
-        <Title text='Profile' onLeftPress={this.handleLeftPress.bind(this)}/>
+        <Title text='LMS' onLeftPress={this.handleLeftPress.bind(this)}/>
       </View>
     );
-  }
+}
 };
 
 var styles=StyleSheet.create({
 
 });
-module.exports=ProfileScreen;
+
+module.exports=LMSScreen;

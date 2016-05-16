@@ -24,7 +24,7 @@ class DashboardScreen extends Component{
   }
 
   gotoCompensation(){
-    var route = { screen: require('.CompensationScreen')}
+    var route = { screen: require('./CompensationScreen')}
     this.props.navigator.push(route);
   }
 

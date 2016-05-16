@@ -36,7 +36,7 @@ class LoginScreen extends Component{
   render() {
     return(
       <View>
-        <Title text='Login' /> 
+        <Title text='Login'/> 
         <Label text='User Name'/>
         <TextInput 
           onChangeText={(value)=>this.setState({userName:value})} 

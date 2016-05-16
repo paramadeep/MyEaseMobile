@@ -11,17 +11,15 @@ import {
   Button,
 } from '../Components';
 
-
-class ProfileScreen  extends Component{
-  handleLeftPress(){
+class CompensationScreen  extends Component{
+ handleLeftPress(){
     this.props.navigator.pop();
   }
-
 
   render() {
     return(
       <View>
-        <Title text='Profile' onLeftPress={this.handleLeftPress.bind(this)}/>
+        <Title text='Compensation' onLeftPress={this.handleLeftPress.bind(this)}/>
       </View>
     );
   }
@@ -30,4 +28,5 @@ class ProfileScreen  extends Component{
 var styles=StyleSheet.create({
 
 });
-module.exports=ProfileScreen;
+
+module.exports=CompensationScreen;
