@@ -20,6 +20,7 @@ class CompensationScreen  extends Component{
     return(
       <View>
         <Title text='Compensation' onLeftPress={this.handleLeftPress.bind(this)}/>
+        <Button text='View Pay Slip'/>
       </View>
     );
   }
