@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import { LoginScreen } from './Screens'
-debugger;
+
 export default class Home extends Component{
   render() {
     return(

@@ -17,10 +17,18 @@ import {
   GoToLeftIcon,
   GoToRightIcon,
   AddIcon,
-  DoneIcon 
-} from '../Images';
+  DoneIcon
+} from '../Icons';
 
 export default class Title  extends Component{
+
+  getActionIcon(){
+    var actions = {
+      add: AddIcon,
+      done: DoneIcon
+    }
+    return actions[this.props.action]
+  }
 
   renderLeftArrow(){
     var onLeftPress = this.props.onLeftPress;
@@ -45,7 +53,7 @@ export default class Title  extends Component{
       return (
         <View style={styles.actionRow}>
           <View style={styles.action}>
-            <Icon name={AddIcon} onPress={action} /> 
+            <Icon name={this.getActionIcon.bind(this)()} onPress={action} /> 
           </View>
         </View>
       )
@@ -109,5 +117,7 @@ var styles=StyleSheet.create({
     justifyContent: 'flex-end',
     marginTop: -30,
     marginRight: 5,
+    width: 60,
+    alignSelf: 'flex-end',
   },
 });

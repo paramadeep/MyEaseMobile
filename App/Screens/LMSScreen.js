@@ -5,13 +5,14 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-
 import {
   Title,
   Button,
   FieldValue
 } from '../Components';
-import AddLeaveScreen from './AddLeaveScreen';
+import { AddIcon } from '../Icons';
+import { AddLeaveScreen } from '../Screens';
+
 export default class LMSScreen  extends Component{
 
   handleLeftPress(){
@@ -27,10 +28,11 @@ export default class LMSScreen  extends Component{
 
   render() {
     return(
-     <View>
-       <Title text='Leaves' 
-         onLeftPress={this.handleLeftPress.bind(this)} 
-         onAction={this.addLeave.bind(this)}/>
+      <View>
+        <Title text='Leaves' 
+          onLeftPress={this.handleLeftPress.bind(this)} 
+          onAction={this.addLeave.bind(this)}
+          action='add'/>
         <FieldValue value='Taken: 10 days' field='Available: 15 days'/>
       </View>
     );

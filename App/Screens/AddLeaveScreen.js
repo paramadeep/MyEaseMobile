@@ -31,7 +31,9 @@ export default class AddLeave extends Component{
     return(
       <View>
         <Title text='Add Leave' 
-          onLeftPress={this.handleLeftPress.bind(this)}/>
+          onLeftPress={this.handleLeftPress.bind(this)}
+          onAction={()=>{}} 
+          action='done'/>
         <ScrollView style={styles.scroll}>
           <Text>Leave Type</Text>
           <Picker 
