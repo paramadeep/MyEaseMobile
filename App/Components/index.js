@@ -1,14 +1,21 @@
 'use strict';
 
-var Components = {
-  get Button(){return require('./Button')},
-  get Label(){return require('./Label')},
-  get TextInput(){return require('./TextInput')},
-  get Title(){return require('./Title')},
-  get FieldValue(){return require('./FieldValue')},
-  get DatePicker(){
-    return require('./DatePicker');
-  },
-}
+import Button from './Button';
+import DatePicker from './DatePicker';
+import FieldValue from './FieldValue';
+import Icon from './Icon';
+import Label from './Label';
+import Separator from './Separator';
+import TextInput from './TextInput';
+import Title from './Title';
 
-module.exports = Components;
+export {
+  Button,
+  DatePicker,
+  FieldValue,
+  Icon,
+  Label,
+  Separator,
+  TextInput,
+  Title,
+};

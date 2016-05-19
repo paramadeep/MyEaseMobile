@@ -11,7 +11,7 @@ import Separator from './Separator'
 import Icon from './Icon'
 import Colors from '../Colors'
 
-class FieldValue  extends Component{
+export default class FieldValue  extends Component{
 
   renderLeftIcon(){
     var leftIcon = this.props.leftIcon;
@@ -68,5 +68,3 @@ var styles=StyleSheet.create({
     flexDirection: 'row'
   }
 });
-
-module.exports=FieldValue;

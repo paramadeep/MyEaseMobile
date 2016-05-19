@@ -11,7 +11,7 @@ import {
   Button,
 } from '../Components';
 
-class CompensationScreen  extends Component{
+export default class CompensationScreen  extends Component{
  handleLeftPress(){
     this.props.navigator.pop();
   }
@@ -29,5 +29,3 @@ class CompensationScreen  extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=CompensationScreen;

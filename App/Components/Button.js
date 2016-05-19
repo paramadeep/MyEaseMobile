@@ -7,9 +7,9 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
-var Colors = require('../Colors')
+import Colors from '../Colors'
 
-class Button  extends Component{
+export default class Button  extends Component{
   render() {
     return(
       <TouchableHighlight 
@@ -44,5 +44,3 @@ var styles=StyleSheet.create({
     justifyContent: 'center'
   },
 });
-
-module.exports=Button;

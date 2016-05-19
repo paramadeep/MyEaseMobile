@@ -1,4 +1,4 @@
-var Colors = {
+export default  {
   darkPrimary: "#388E3C",
   defaultPrimary: "#4CAF50",
   lightPrimary: "#C8E6C9",
@@ -8,4 +8,3 @@ var Colors = {
   secondaryText: "#727272",
   divider: "#B6B6B6"
 }
-module.exports = Colors

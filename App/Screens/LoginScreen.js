@@ -10,8 +10,9 @@ import {
   Button,
 } from '../Components';
 
-var DashboardScreen = require('./DashboardScreen');
-class LoginScreen extends Component{
+import  { DashboardScreen }  from '../Screens';
+
+export default class LoginScreen extends Component{
   constructor(props) { 
     super(props); 
     this.state = { 
@@ -54,5 +55,3 @@ class LoginScreen extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=LoginScreen;

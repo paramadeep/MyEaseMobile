@@ -12,7 +12,7 @@ import {
   FieldValue
 } from '../Components';
 import AddLeaveScreen from './AddLeaveScreen';
-class LMSScreen  extends Component{
+export default class LMSScreen  extends Component{
 
   handleLeftPress(){
     this.props.navigator.pop()
@@ -40,5 +40,3 @@ class LMSScreen  extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=LMSScreen;

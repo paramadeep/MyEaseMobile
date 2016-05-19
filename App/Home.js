@@ -5,8 +5,9 @@ import {
   Navigator
 } from 'react-native';
 
-var LoginScreen = require('./Screens/LoginScreen')
-class Home extends Component{
+import { LoginScreen } from './Screens'
+debugger;
+export default class Home extends Component{
   render() {
     return(
       <Navigator 
@@ -17,4 +18,3 @@ class Home extends Component{
   }
 };
 
-module.exports=Home;

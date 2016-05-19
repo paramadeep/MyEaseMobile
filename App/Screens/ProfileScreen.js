@@ -14,7 +14,7 @@ import {
 } from '../Components';
 
 
-class ProfileScreen  extends Component{
+export default class ProfileScreen  extends Component{
   handleLeftPress(){
     this.props.navigator.pop();
   }
@@ -35,4 +35,3 @@ class ProfileScreen  extends Component{
 var styles=StyleSheet.create({
 
 });
-module.exports=ProfileScreen;

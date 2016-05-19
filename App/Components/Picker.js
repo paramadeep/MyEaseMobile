@@ -6,7 +6,7 @@ import {
   Picker
 } from 'react-native';
 
-class PickerControl  extends Component{
+export default class PickerControl  extends Component{
   renderPickerItems(){
     var pickerItems = [];
     return pickerItems;
@@ -27,5 +27,3 @@ class PickerControl  extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=PickerControl;

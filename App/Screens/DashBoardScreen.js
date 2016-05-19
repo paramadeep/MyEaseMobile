@@ -11,25 +11,32 @@ import {
   Button,
 } from '../Components';
 
-class DashboardScreen extends Component{
+import {
+  ProfileScreen,
+  LMSScreen,
+  CompensationScreen,
+  PayEScreen
+} from '../Screens';
+
+export default class DashboardScreen extends Component{
 
   gotoProfile(){
-    var route = { screen: require('./ProfileScreen')}
+    var route = { screen: ProfileScreen}
     this.props.navigator.push(route);
   }
 
   gotoLMS(){
-    var route = { screen: require('./LMSScreen')}
+    var route = { screen: LMSScreen}
     this.props.navigator.push(route);
   }
 
   gotoCompensation(){
-    var route = { screen: require('./CompensationScreen')}
+    var route = { screen: CompensationScreen}
     this.props.navigator.push(route);
   }
 
   gotoPayE(){
-    var route = { screen: require('./PayEScreen')}
+    var route = { screen: PayEScreen}
     this.props.navigator.push(route);
   }
 
@@ -49,4 +56,3 @@ class DashboardScreen extends Component{
 var styles=StyleSheet.create({
 
 });
-module.exports=DashboardScreen;

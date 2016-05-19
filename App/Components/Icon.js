@@ -7,7 +7,7 @@ import {
   Image,
 } from 'react-native';
 
-class Icon extends Component{
+export default class Icon extends Component{
   render() {
     return(
       <TouchableWithoutFeedback onPress={this.props.onPress}>
@@ -20,5 +20,3 @@ class Icon extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=Icon;

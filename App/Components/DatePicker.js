@@ -11,7 +11,7 @@ import {
   Text,
 } from 'react-native';
 
-class DatePicker  extends Component{
+export default class DatePicker  extends Component{
   constructor(props) { 
     super(props); 
     this.state = { 
@@ -72,5 +72,3 @@ class DatePicker  extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=DatePicker;

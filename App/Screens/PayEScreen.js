@@ -12,7 +12,7 @@ import {
 } from '../Components';
 
 
-class PayEScreen  extends Component{
+export default class PayEScreen  extends Component{
   handleLeftPress(){
     this.props.navigator.pop();
   }
@@ -29,5 +29,3 @@ class PayEScreen  extends Component{
 var styles=StyleSheet.create({
 
 });
-
-module.exports=PayEScreen;

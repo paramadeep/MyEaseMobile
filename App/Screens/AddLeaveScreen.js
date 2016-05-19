@@ -16,7 +16,7 @@ import {
   DatePicker,
 } from '../Components';
 
-class AddLeave extends Component{
+export default class AddLeave extends Component{
   constructor(props) { 
     super(props); 
     this.state = { 
@@ -60,5 +60,3 @@ var styles=StyleSheet.create({
     height: Dimensions.get('window')['height']-70
   }
 });
-
-module.exports=AddLeave;

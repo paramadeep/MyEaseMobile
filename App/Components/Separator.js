@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 import Colors from '../Colors'
-class Separator  extends Component{
+export default class Separator  extends Component{
   render() {
     return(
       <View style={styles.separator} />
@@ -23,5 +23,3 @@ var styles=StyleSheet.create({
   },
 
 });
-
-module.exports=Separator;

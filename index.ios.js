@@ -3,7 +3,7 @@ import {
   AppRegistry,
 } from 'react-native';
 
-var Home = require("./App/Home")
+import  Home  from './App/Home'
 
 class MyEas extends Component {
   render() {

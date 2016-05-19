@@ -8,15 +8,25 @@ import {
   Text,
 } from 'react-native';
 
-import  Colors  from '../Colors'
-import Icon from './Icon'
-class Title  extends Component{
+import {
+  Icon,
+} from '../Components';
+
+import  Colors  from '../Colors';
+import { 
+  GoToLeftIcon,
+  GoToRightIcon,
+  AddIcon,
+  DoneIcon 
+} from '../Images';
+
+export default class Title  extends Component{
 
   renderLeftArrow(){
     var onLeftPress = this.props.onLeftPress;
     if(onLeftPress){
       return (
-        <Icon name={require('../Images/chevron_left/icon.png')} onPress={onLeftPress} /> 
+        <Icon name={GoToLeftIcon} onPress={onLeftPress} /> 
       )
 }
   }
@@ -24,7 +34,7 @@ class Title  extends Component{
     var onRightPress = this.props.onRightPress;
     if(onRightPress){
       return (
-        <Icon name={require('../Images/chevron_right/icon.png')} onPress={onRightPress} /> 
+        <Icon name={GoToRightIcon} onPress={onRightPress} /> 
       )
     }
   }
@@ -35,7 +45,7 @@ class Title  extends Component{
       return (
         <View style={styles.actionRow}>
           <View style={styles.action}>
-            <Icon name={require('../Images/add/icon.png')} onPress={action} /> 
+            <Icon name={AddIcon} onPress={action} /> 
           </View>
         </View>
       )
@@ -101,5 +111,3 @@ var styles=StyleSheet.create({
     marginRight: 5,
   },
 });
-
-module.exports=Title;

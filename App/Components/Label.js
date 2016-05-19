@@ -6,9 +6,9 @@ import {
   Text
 } from 'react-native';
 
-var Colors = require('../Colors')
+import Colors from '../Colors'
 
-class Label  extends Component{
+export default class Label  extends Component{
   render() {
     return(
       <Text style={styles.label}> 
@@ -24,4 +24,3 @@ var styles=StyleSheet.create({
   }
 });
 
-module.exports=Label;

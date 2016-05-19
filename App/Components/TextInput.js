@@ -6,9 +6,9 @@ import {
   TextInput,
 } from 'react-native';
 
-var Colors = require('../Colors')
+import Colors from '../Colors'
 
-class ImprovedTextInput  extends Component{
+export default class ImprovedTextInput  extends Component{
   render() {
     return(
       <TextInput 
@@ -36,5 +36,3 @@ var styles=StyleSheet.create({
     textAlign: 'center'
   }
 });
-
-module.exports=ImprovedTextInput;
