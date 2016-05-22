@@ -43,10 +43,15 @@ export default class AddLeave extends Component{
             <Picker.Item label="Sick" value="sick" /> 
             <Picker.Item label="LOP" value="lop" /> 
           </Picker>
-          <Text>Start Date </Text>
-          <DatePicker style={styles.datePicker} />
-          <Text>End Date </Text>
-          <DatePicker />
+          <DatePicker text='Start Date' 
+            date={this.state.startDate} 
+            onDateChange={(startDate)=>{this.setState({startDate: startDate})}}
+          />
+          <DatePicker 
+            text='End Date' 
+            date={this.props.endDate}
+            onDateChange={(endDate)=>{this.setState({endDate: endDate})}}
+          />
         </ScrollView>
       </View>
     );

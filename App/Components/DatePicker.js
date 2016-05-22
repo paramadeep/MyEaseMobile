@@ -3,13 +3,13 @@
 import React, { Component} from 'react';
 import {
   Platform,
-  StyleSheet,
-  View,
-  DatePickerIOS,
-  DatePickerAndroid,
-  TouchableWithoutFeedback,
   Text,
 } from 'react-native';
+
+import { 
+  DatePickerIOS, 
+  DatePickerAndroid,
+} from '../Components';
 
 export default class DatePicker  extends Component{
   constructor(props) { 
@@ -18,57 +18,28 @@ export default class DatePicker  extends Component{
       date: this.props.date || new Date() ,
     }; 
   }
-  get datePicker() {
-    return({
-      ios: this.renderIosDatePicker,
-      android: this.renderAndroidDatePicker,
-    });
-  }
 
   handleDateChange(date){
     this.setState({date: date});
+    this.props.onDateChange(date);
   } 
 
-  renderIosDatePicker(){
-    return(
-      <DatePickerIOS
-        date={this.state.date} 
-        mode="date"
-        onDateChange={this.handleDateChange.bind(this)}
-      />
-    );
+  get datePicker() {
+    return({
+      ios: DatePickerIOS,
+      android: DatePickerAndroid
+    });
   }
 
-  getPrintableDate(){
-    var date = this.state.date;
-    return date.toLocaleDateString()
-  }
-
-  handleAndroidDateChange(dateResponse){
-    if(dateResponse.action !== DatePickerAndroid.dismissedAction){
-      this.handleDateChange(new Date(dateResponse.year,dateResponse.month,dateResponse.day))
-    }
-  }
-
-  showAndroidPicker(){
-    DatePickerAndroid.open({date: this.state.date}).then(this.handleAndroidDateChange.bind(this)).done()
-  }
-
-  renderAndroidDatePicker(){
-    return(
-      <TouchableWithoutFeedback onPress={this.showAndroidPicker.bind(this)} > 
-        <Text> {this.getPrintableDate.bind(this)() }</Text>
-      </TouchableWithoutFeedback>
-    );
-  }
 
   render() {
+    var PlatformDatePicker = this.datePicker[Platform.OS].bind(this);
     return(
-      this.datePicker[Platform.OS].bind(this)()
+      <PlatformDatePicker 
+        date={this.state.date} 
+        onDateChange={this.handleDateChange.bind(this)} 
+        text={this.props.text}
+          />
     );
   }
 };
-
-var styles=StyleSheet.create({
-
-});
